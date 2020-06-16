@@ -1,3 +1,5 @@
+-- Relatorio para bater encerrantes logicos terminais--
+
 Select  f.FIL_Nome as "FILIAL",
         t.ter_identificacao_empresa as "TERMINAL",
         b.BOM_IDENTIFICACAO_EMPRESA as "BOMBA",

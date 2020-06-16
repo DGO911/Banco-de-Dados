@@ -1,3 +1,5 @@
+-- Marcando operadores para cada terminal na criado, pós versão 2.14.10
+
 Select 'INSERT INTO [dbo].[GTW_OPERACAO_VEICULO]
            ([VEI_CODIGO]
            ,[OPE_CODIGO]

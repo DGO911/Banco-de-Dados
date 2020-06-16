@@ -1,3 +1,5 @@
+--Convertendo valores para tabela nova.
+
 SELECT cast(CODABAS as int)
       ,cast(HORIMETRO as numeric(10,3))
       ,cast(CODTERM as int)

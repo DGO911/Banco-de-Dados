@@ -7,15 +7,14 @@ DELETE FROM gtw_veiculo where FIL_CODIGO='4';
  commit;
  
  
- SELECT * FROM Gtw_ where fil_codigo='5';
-
+-- Deletando filial, sem abast
 1 DELETE FROM GTW_FILIAL WHERE FIL_CODIGO='5'
 2 DELETE FROM GTW_CI WHERE CIN_CODIGO='4';
 3 DELETE FROM GTW_CONVERSAO_CHAVE_CLIENTE WHERE FIL_CODIGO ='4';
 4 delete from gtw_usuario_seguranca_filial where fil_codigo='4';
 
 
-
+-- com abast
 DELETE FROM GTW_CARTAO_FILA WHERE CAR_CODIGO IN (select CAR_CODIGO from gtw_veiculo where fil_codigo='5');
 DELETE FROM GTW_VEICULO_TERMINAL WHERE VEI_CODIGO IN (select VEI_CODIGO from gtw_veiculo where fil_codigo='5');
 DELETE FROM GTW_HISTORICO_ALTERACAO_COTA  WHERE VEI_CODIGO IN (select VEI_CODIGO from gtw_veiculo where fil_codigo='5');

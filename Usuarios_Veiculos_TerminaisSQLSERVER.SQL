@@ -1,3 +1,5 @@
+-- criando massa de insets para cruzar veiculo com terminal.
+
 select ('Insert into GTW_VEICULO_TERMINAL values ($NUMERO_LOGICO_DO_TERMINAL$,' + cast(VEI_CODIGO as varchar(15)) + ');') as 'Inserts' 
 from GTW_VEICULO_TERMINAL where ter_codigo in 
 (Select  ter_codigo from 
@@ -8,6 +10,7 @@ JOIN GTW_FILIAL F ON F.FIL_CODIGO=T.FIL_CODIGO
 where F.FIL_NOME like '%$NOME_DA_FILIAL$%'
 GROUP BY T.TER_IDENTIFICACAO_EMPRESA,T.TER_CODIGO,F.FIL_NOME)"Terminal");
 
+-- criando massa de insets para cruzar usuario com terminal.
 
 select ('Insert into GTW_USUARIO_TERMINAL values (' + cast(USU_CODIGO as varchar(15)) + ',$NUMERO_LOGICO_DO_TERMINAL$);') as 'Inserts'
 from GTW_USUARIO_TERMINAL where ter_codigo in 

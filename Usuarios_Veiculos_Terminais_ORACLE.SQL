@@ -1,3 +1,5 @@
+-- crianto massa de veiculos para cruzar com terminal
+
 select replace(concat(concat('Insert into GTW_VEICULO_TERMINAL values ($182$,$',VEI_CODIGO), '$);'), '$', '''') 
 from GTW_VEICULO_TERMINAL where ter_codigo in 
 (Select ter_codigo from 
@@ -9,6 +11,7 @@ where F.FIL_NOME like '%Santa Luzia%'
 GROUP BY T.TER_IDENTIFICACAO_EMPRESA,T.TER_CODIGO,F.FIL_NOME
 ORDER BY 4 DESC) where rownum = 1);
 
+-- criando massa de usuario para cruzar com terminal
 
 select replace(concat(concat('Insert into GTW_USUARIO_TERMINAL values ($',USU_CODIGO), '$,$182$);'), '$', '''') 
 from GTW_USUARIO_TERMINAL where ter_codigo in 

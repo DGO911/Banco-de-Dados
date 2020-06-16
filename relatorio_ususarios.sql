@@ -1,3 +1,5 @@
+-- relatorio de acesso para cada usuario.
+
 Select u.USS_CODIGO as "Codigo Usuario", 
        u.USS_NOME as "Nome Usuario",
        u.USS_USERNAME as "Login",
